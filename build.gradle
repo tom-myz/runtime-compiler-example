@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+apply plugin: 'application'
+
+mainClassName = 'test.SampleApp'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'net.openhft', name: 'compiler', version: '2.4.1'
+}
+
+wrapper {
+    gradleVersion = '7.3.3'
+}
