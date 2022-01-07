@@ -13,9 +13,8 @@ public class SampleApp {
       "}\n";
 
   public static void main(String[] args) throws Exception {
-      ClassLoader cl = new ClassLoader() {};
       CachedCompiler cc = new CachedCompiler(null, null);
-      Class aClass = cc.loadFromJava(cl, className, myClassStr);
+      Class aClass = cc.loadFromJava(className, myClassStr);
 
       Runnable runnable = (Runnable) aClass.getDeclaredConstructor().newInstance();
       runnable.run();
