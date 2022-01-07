@@ -1,7 +1,13 @@
-apply plugin: 'java-library'
-apply plugin: 'application'
+plugins {
+    id 'java-library'
+    id 'application'
+    id 'org.javamodularity.moduleplugin' version '1.8.10'
+}
 
-mainClassName = 'test.SampleApp'
+application {
+    mainModule = 'hft.compiler.sample.main'
+    mainClass = 'test.SampleApp'
+}
 
 repositories {
     mavenCentral()
